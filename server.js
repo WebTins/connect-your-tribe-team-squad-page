@@ -41,13 +41,22 @@ app.get('/', async function (request, response) {
   // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
   const messagesResponseJSON = await messagesResponse.json()
 
+
+  const personResponse = await fetch(
+    "https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter[squads][squad_id][tribe][name]=FDND Jaar 1&filter[squads][squad_id][cohort]=2526"  
+    // + new URLSearchParams(),
+  );
+
+  const personResponseJSON = await personResponse.json();
+
   // Controleer eventueel de data in je console
   // console.log(messagesResponseJSON)
 
   // En render de view met de messages
   response.render('index.liquid', {
     teamName: teamName,
-    messages: messagesResponseJSON.data
+    messages: messagesResponseJSON.data,
+    persons: personResponseJSON.data
   })
 })
 
