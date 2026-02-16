@@ -1,6 +1,62 @@
-<h1>Zet 'm op team {{ teamName }}!</h1>
+{% render 'partials/head.liquid', title: 'Squad page' %}
 
-<h2>Huidige berichten</h2>
+{% comment %} <h1>Zet 'm op team {{ teamName }}!</h1> {% endcomment %}
+
+{% comment %} <h2>Huidige berichten</h2> {% endcomment %}
+
+<main>
+  {% comment %} Filters en Sorteer opties {% endcomment %}
+  <ul class="filters">
+    <li>
+      {% comment %} Filter naar alle squads {% endcomment %}
+      <a href="/" class="filter-link">Alle squads</a>
+    </li>
+    {% comment %} Filter naar Squad 1i {% endcomment %}
+    <li>
+      <a href="/squad-1i" class="filter-link">Squad 1I</a>
+    </li>
+    {% comment %} Filter naar Squad 1j {% endcomment %}
+    <li>
+      <a href="/squad-1j" class="filter-link">Squad 1J</a>
+    </li>
+    {% comment %} Filter naar jongste {% endcomment %}
+    <li>
+      <a href="/jong" class="filter-link">Jongste</a>
+    </li>
+    {% comment %} Filter naar oudste {% endcomment %}
+    <li>
+      <a href="/oud" class="filter-link">Oudste</a>
+    </li>
+  </ul>
+
+  {% comment %} De hele lijst aan cards {% endcomment %}
+  <div class="card-list">
+    {% for person in persons %}
+    {% comment %} Card box met alle content erin {% endcomment %}
+    <div class="card-box">
+      <div class="card-image">
+  
+    {% comment %} Als persoon wel mugshot heeft, haal deze mugshot op. {% endcomment %}
+    {% if person.mugshot %}
+      <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="Profiel foto">
+      
+    {% comment %} Als persoon geen mugshot heeft, vervang het met deze image {% endcomment %}
+    {% else %}
+      <img class="patrick" src="/patrick.png" width="50" alt="Patrick">
+    {% endif %}
+      </div>
+
+      {% comment %} Content in de card {% endcomment %}
+      <div class="card-content">
+        <h2 class="card-name">{{ person.name }}</h2>
+
+        <a href="{{ person.profilecard }}" class="profile-button">Profilecard</a>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+
 
 {% for message in messages %}
   <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
@@ -20,3 +76,5 @@
   </label>
   <button type="submit">Verstuur</button>
 </form>
+</main>
+{% render 'partials/foot.liquid', squads: squads %}
