@@ -39,7 +39,6 @@
     {% comment %} Als persoon wel mugshot heeft, haal deze mugshot op. {% endcomment %}
     {% if person.mugshot %}
       <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="Profiel foto">
-      
     {% comment %} Als persoon geen mugshot heeft, vervang het met deze image {% endcomment %}
     {% else %}
       <img class="patrick" src="/patrick.png" width="50" alt="Patrick">
@@ -48,8 +47,10 @@
 
       {% comment %} Content in de card {% endcomment %}
       <div class="card-content">
+        {% comment %} Linnk naar student page voor de comments {% endcomment %}
+        <a href="/student/{{ person.id }}" class="profile-link" >
+          
         <h2 class="card-name">{{ person.name }}</h2>
-
         <a href="{{ person.profilecard }}" class="profile-button">Profilecard</a>
       </div>
     </div>
