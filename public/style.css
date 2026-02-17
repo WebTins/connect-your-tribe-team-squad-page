@@ -11,7 +11,7 @@
     --light-accent: white;
     --dark-accent: black;
 
-    --gap-small: 1rem;
+    --gap-small: 1rem;  
     --gap-medium: 1.5rem;
 
     --border-radius-button: 50px;
@@ -39,4 +39,34 @@ h1 {
         -2px  2px 0 #8956FB,
          2px  2px 0 #8956FB,
          4px  4px 0 #8956FB;
+}
+
+main {   
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap-medium);
+        padding: 2rem;
+        flex-wrap: wrap;
+        list-style-type: none;
+
+        a {
+            display: inline-flex;
+            justify-content: center;
+            font-family: sans-serif;
+            align-items: center;
+            text-decoration: none;
+            color: var(--light-accent);
+            background-color: var(--card-background);
+            border-radius: var(--border-radius-button);
+            width: 100px;
+            height: 40px;
+            transition: 0.3s ease-in-out;
+
+        }
+
+        a:hover {
+            background-color: rgb(137 86 251 / 30%);
+        }
+    }
 }
