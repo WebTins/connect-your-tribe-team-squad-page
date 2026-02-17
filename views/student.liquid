@@ -1,4 +1,12 @@
-{% render 'partials/head.liquid', title: person.name %}
+{% render 'partials/head.liquid' %}
+
+<h1 class="student-heading" style="text-shadow:
+        -2px -2px 0 {{ person.fav_color }},
+         2px -2px 0 {{ person.fav_color }},
+        -2px  2px 0 {{ person.fav_color }},
+         2px  2px 0 {{ person.fav_color }},
+         4px  4px 0 {{ person.fav_color }}"
+        >{{ person.name }}</h1>
 
 <a href="/">Back</a>
 {% for message in messages %}
