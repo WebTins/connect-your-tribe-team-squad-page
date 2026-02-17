@@ -65,7 +65,7 @@
   </div>
 
 
-{% comment %} {% for message in messages %}
+{% for message in messages %}
   <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
 {% else %}
   <p>Er zijn nog geen berichten voor dit team.</p>
@@ -82,6 +82,6 @@
     <textarea name="text" required></textarea>
   </label>
   <button type="submit">Verstuur</button>
-</form> {% endcomment %}
+</form>
 </main>
 {% render 'partials/foot.liquid', squads: squads %}
