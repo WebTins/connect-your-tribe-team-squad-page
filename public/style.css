@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--primary-background);
+}
+
+:root {
+    --primary-background: #17141F;
+    --card-background: #6441A4;
+
+    --light-accent: white;
+    --dark-accent: black;
+
+    --gap-small: 1rem;
+    --gap-medium: 1.5rem;
+
+    --border-radius-button: 50px;
+
+    --font-size-small: 1em;
+    --font-size-medium: 1.5em;
+    --font-size-large: 2.5em;
+}
+
+@font-face {
+    font-family: Twitch;
+    src: url(/Twitchy.TV.ttf);
+}
