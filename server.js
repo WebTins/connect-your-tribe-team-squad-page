@@ -89,6 +89,76 @@ app.post('/', async function (request, response) {
   response.redirect(303, '/')
 })
 
+app.get('/squad-1i', async function (request, response) {
+
+  const params = {'fields': '*,squads.*',
+
+    'filter[squads][squad_id][tribe][name]': 'FDND Jaar 1',
+    'filter[squads][squad_id][name]': '1I',
+    'filter[squads][squad_id][cohort]': '2526'
+  }
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
+
+  const personResponseJSON = await personResponse.json()
+
+  response.render('index.liquid', {persons: personResponseJSON.data})
+})
+
+app.get('/squad-1j', async function (request, response) {
+
+  const params = {'fields': '*,squads.*',
+
+    'filter[squads][squad_id][tribe][name]': 'FDND Jaar 1',
+    'filter[squads][squad_id][name]': '1J',
+    'filter[squads][squad_id][cohort]': '2526'
+  }
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
+
+  const personResponseJSON = await personResponse.json()
+
+  response.render('index.liquid', {persons: personResponseJSON.data})
+})
+
+app.get('/jong', async function (request, response) {
+
+  const params = {
+    'fields': '*,squads.*',
+    'sort': '-birthdate,name',
+
+    'filter[squads][squad_id][tribe][name]': 'FDND Jaar 1',
+    'filter[squads][squad_id][cohort]': '2526',
+    'filter[birthdate][_nnull]': true
+    
+  }
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
+
+  const personResponseJSON = await personResponse.json()
+
+  response.render('index.liquid', {persons: personResponseJSON.data})
+})
+
+app.get('/oud', async function (request, response) {
+
+  const params = {
+    'fields': '*,squads.*',
+    'sort': 'birthdate,name',
+
+    'filter[squads][squad_id][tribe][name]': 'FDND Jaar 1',
+    'filter[squads][squad_id][cohort]': '2526',
+    'filter[birthdate][_nnull]': true
+    
+  }
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?' + new URLSearchParams(params))
+
+  const personResponseJSON = await personResponse.json()
+
+  response.render('index.liquid', {persons: personResponseJSON.data})
+})
+
 
 app.set('port', process.env.PORT || 8000)
 
