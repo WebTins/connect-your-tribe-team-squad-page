@@ -43,7 +43,16 @@ h1 {
 
   @media (min-width: 375px) {
     font-size: var(--font-size-large);
-  }
+    color: var(--dark-accent);
+
+    text-shadow:
+        -2px -2px 0 #8956fb,
+        2px -2px 0 #8956fb,
+        -2px 2px 0 #8956fb,
+        2px 2px 0 #8956fb,
+        4px 4px 0 #8956fb;
+.student-heading {
+    color: var(--light-accent);
 }
 
 body {
