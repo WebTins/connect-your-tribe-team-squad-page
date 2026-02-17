@@ -60,6 +60,30 @@ app.get('/', async function (request, response) {
   })
 })
 
+// Haal bijvoorbeeld alle eerstejaars squads van dit jaar uit de WHOIS API op (2025–2026)
+const params = {
+  'filter[cohort]': '2526',
+  'filter[tribe][name]': 'FDND Jaar 1'
+}
+
+const squadResponse = await fetch('https://fdnd.directus.app/items/squad?' + new URLSearchParams(params))
+
+// Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+const squadResponseJSON = await squadResponse.json()
+
+// Maak een GET route voor een detailpagina met een route parameter, id
+// Zie de documentatie van Express voor meer info: https://expressjs.com/en/guide/routing.html#route-parameters
+app.get('/student/:id', async function (request, response) {
+  // Gebruik de request parameter id en haal de juiste persoon uit de WHOIS API op
+  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
+  // En haal daarvan de JSON op
+  const personDetailResponseJSON = await personDetailResponse.json()
+  
+  // Render student.liquid uit de views map en geef de opgehaalde data mee als variable, genaamd person
+  // Geef ook de eerder opgehaalde squad data mee aan de view
+  response.render('index.liquid', {person: personDetailResponseJSON.data, squads: squadResponseJSON.data})
+})
+
 app.post('/', async function (request, response) {
 
   // Stuur een POST request naar de messages tabel
