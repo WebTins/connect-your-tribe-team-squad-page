@@ -49,8 +49,15 @@
       <div class="card-content">
         {% comment %} Linnk naar student page voor de comments {% endcomment %}
         <a href="/student/{{ person.id }}" class="profile-link" >
-          
-        <h2 class="card-name">{{ person.name }}</h2>
+          <h2 class="card-name">{{ person.name }}</h2>
+        </a>
+        {% if person.nickname == '<h1 style="font-size: 10rem;">Tjeerd</h1><img src="https://media1.tenor.com/m/V3cqZQGN8jUAAAAd/ramattra-dance.gif">' %} 
+          <p>Kut tjeerd verander je nickname</p>
+          {% else %}
+          <p>{{ person.nickname }}</p>
+         {% endif %}
+        <p>{{ person.birthdate | date: '%d-%m-%Y'}}</p>
+        <p>schoenmaat: {{ person.shoe_size }}</p>
         <a href="{{ person.profilecard }}" class="profile-button">Profilecard</a>
       </div>
     </div>
@@ -58,7 +65,7 @@
   </div>
 
 
-{% for message in messages %}
+{% comment %} {% for message in messages %}
   <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
 {% else %}
   <p>Er zijn nog geen berichten voor dit team.</p>
@@ -75,6 +82,6 @@
     <textarea name="text" required></textarea>
   </label>
   <button type="submit">Verstuur</button>
-</form>
+</form> {% endcomment %}
 </main>
 {% render 'partials/foot.liquid', squads: squads %}
