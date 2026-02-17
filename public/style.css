@@ -25,3 +25,18 @@
     font-family: Twitch;
     src: url(/Twitchy.TV.ttf);
 }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Twitch;
+    font-size: var(--font-size-large);
+    color: var(--light-accent);
+
+    text-shadow:
+        -2px -2px 0 #8956FB,
+         2px -2px 0 #8956FB,
+        -2px  2px 0 #8956FB,
+         2px  2px 0 #8956FB,
+         4px  4px 0 #8956FB;
+}
