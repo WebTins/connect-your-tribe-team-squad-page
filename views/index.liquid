@@ -29,6 +29,13 @@
     </li>
   </ul>
 
+  <section>
+    <form>
+      <input type="search" placeholder="Zoeken" value="{{ search }}">
+      <button>Zoek</button>
+    </form>
+  </section>
+
   {% comment %} De hele lijst aan cards {% endcomment %}
   <div class="card-list">
     {% for person in persons %}
