@@ -83,6 +83,40 @@ main {
     }
   }
 
+  section {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+
+    input, button {
+      display: inline-flex;
+      background-color: var(--card-background);
+      color: var(--light-accent);
+      border-radius: 1rem;
+      padding: 0.625rem;
+      width: 100%;
+    }
+
+    input {
+      text-align: center;
+      border: none;
+    }
+
+    input::placeholder {
+      color: var(--light-accent);
+    }
+
+    input:focus {
+      outline: 0 none;
+      outline-color: var(--card-background);
+    }
+
+    button {
+      border: none;
+    }
+  }
+
   .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
