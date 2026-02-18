@@ -51,6 +51,12 @@ h1 {
   color: var(--light-accent);
 }
 
+header {
+  a {
+    text-decoration: none;
+  }
+}
+
 body {
   background-color: var(--primary-background);
 }
@@ -81,46 +87,42 @@ main {
     a:hover {
       background-color: rgb(137 86 251 / 30%);
     }
+
+    a:active {
+      background-color: rgb(137 86 251 / 30%);
+    }
   }
 
   section {
     display: flex;
-    gap: 5px;
     justify-content: center;
     position: relative;
 
-    input, button {
+    input {
       display: inline-flex;
       background-color: var(--card-background);
       color: var(--light-accent);
       border-radius: 1rem;
       padding: 0.625rem;
       width: 100%;
-    }
-
-    input {
       text-align: center;
       border: none;
-    }
 
-    input::placeholder {
-      color: var(--light-accent);
-    }
+      &::placeholder {
+        color: var(--light-accent);
+      }
 
-    input:focus {
-      outline: 0 none;
-      outline-color: var(--card-background);
-    }
-
-    button {
-      border: none;
+      &:focus {
+        outline: 0 none;
+        outline-color: var(--card-background);
+      }
     }
   }
 
   .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     padding: var(--gap-small);
 
     .card-box {
@@ -129,6 +131,8 @@ main {
       padding: 2rem;
       border-radius: var(--gap-small);
       background: var(--card-background);
+      width: 100%;
+      max-width: 23rem;
 
       .card-image {
         display: flex;
