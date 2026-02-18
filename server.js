@@ -110,7 +110,7 @@ app.post('/', async function (request, response) {
   });
 
   // Stuur de browser daarna weer naar de homepage
-  response.redirect(303, '/')
+  response.redirect(303, `/student/${request.params.id}`)
 })
 
 app.get('/squad-1i', async function (request, response) {
