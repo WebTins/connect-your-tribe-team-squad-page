@@ -30,9 +30,12 @@
   </ul>
 
   <section>
-    <form>
-      <input type="search" placeholder="Zoeken" value="{{ search }}">
-      <button>Zoek</button>
+    <form method="GET" action="/">
+      <input 
+        type="search" 
+        placeholder="Zoeken" 
+        name="search" 
+        value="{{ search }}">
     </form>
   </section>
 
@@ -45,7 +48,7 @@
   
     {% comment %} Als persoon wel mugshot heeft, haal deze mugshot op. {% endcomment %}
     {% if person.mugshot %}
-      <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="Profiel foto">
+      <img class="mugshots" src="https://fdnd.directus.app/assets/{{ person.mugshot }}?width=500" alt="{{ person.name }}">
     {% comment %} Als persoon geen mugshot heeft, vervang het met deze image {% endcomment %}
     {% else %}
       <img class="patrick" src="/patrick.png" width="50" alt="Patrick">
