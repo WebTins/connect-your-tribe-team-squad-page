@@ -51,13 +51,20 @@
         <a href="/student/{{ person.id }}" class="profile-link"><h2 class="card-name">{{ person.name }}</h2>
 
         </a>
+        {% comment %} Speciaal een if voor tjeerd omdat hij weer grappig moest zijn {% endcomment %}
         {% if person.nickname == '<h1 style="font-size: 10rem;">Tjeerd</h1><img src="https://media1.tenor.com/m/V3cqZQGN8jUAAAAd/ramattra-dance.gif">' %} 
           <p>Kut tjeerd verander je nickname</p>
+          {% elsif person.nickname %}
+          <p>Nickname: {{ person.nickname }}</p>
           {% else %}
-          <p>{{ person.nickname }}</p>
+            <p>Nickname: Niet aangegeven</p>
         {% endif %}
-        <p>{{ person.birthdate | date: '%d-%m-%Y'}}</p>
-        <p>Schoenmaat: {{ person.shoe_size }}</p>
+        <p>Geboortedatum: {{ person.birthdate | date: '%d-%m-%Y'}}</p>
+        {% if person.shoe_size %}
+          <p>Schoenmaat: {{ person.shoe_size }}</p>
+          {% else %}
+            <p>Schoenmaat: Niet aangegeven</p>
+        {% endif %}
         <a href="{{ person.profilecard }}" class="profile-button">Profilecard</a>
       </div>
     </div>
