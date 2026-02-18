@@ -1,12 +1,12 @@
 {% render 'partials/head.liquid' %}
 
 <h1 class="student-heading" style="text-shadow:
-        -2px -2px 0 {{ person.fav_color }},
-         2px -2px 0 {{ person.fav_color }},
-        -2px  2px 0 {{ person.fav_color }},
-         2px  2px 0 {{ person.fav_color }},
-         4px  4px 0 {{ person.fav_color }}"
-        >{{ person.name }}</h1>
+    -2px -2px 0 {{ person.fav_color }},
+    2px -2px 0 {{ person.fav_color }},
+    -2px  2px 0 {{ person.fav_color }},
+    2px  2px 0 {{ person.fav_color }},
+    4px  4px 0 {{ person.fav_color }}"
+  >{{ person.name }}</h1>
 
 <a href="/">Back</a>
 {% for message in messages %}
@@ -15,16 +15,18 @@
   <p>Er zijn nog geen berichten voor dit team.</p>
 {% endfor %}
 
-<h2>Voeg een bericht toe</h2>
-<form method="post" action="/">
-  <label>
-    Naam:
-    <input type="text" name="from" required>
-  </label>
-  <label>
-    Bericht:
-    <textarea name="text" required></textarea>
-  </label>
-  <button type="submit">Verstuur</button>
-</form>
+<section class="chat">
+  <h2>Voeg een bericht toe</h2>
+  <form method="post" action="/student/{{ person.id }}">
+    <label>
+      Naam:
+      <input type="text" name="from" required>
+    </label>
+    <label>
+      Bericht:
+      <textarea name="text" required></textarea>
+    </label>
+    <button type="submit">Verstuur</button>
+  </form>
+</section>
 {% render 'partials/foot.liquid', squads: squads %}
