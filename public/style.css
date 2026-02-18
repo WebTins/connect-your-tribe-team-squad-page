@@ -182,3 +182,45 @@ main {
     }
   }
 }
+
+
+.back{
+      display: inline-flex;
+      justify-content: center;
+      font-family: sans-serif;
+      align-items: center;
+      text-decoration: none;
+      color: var(--light-accent);
+      background-color: var(--card-background);
+      border-radius: var(--border-radius-button);
+      width: 100px;
+      height: 40px;
+      transition: 0.3s ease-in-out;
+}
+.back:hover {
+  background-color: rgb(137 86 251 / 30%);
+}
+
+div{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .messages{
+    background-color: var(--card-background);
+    height: 70vh;
+    max-width: 70vw;
+    min-width: 50vw;
+    overflow: scroll;
+  }
+
+  .chat{
+    background-color: var(--profile-card-background-color);
+    max-width: 70vw;
+    min-width: 50vw;
+
+    label{
+      padding-right: 20px;
+    }
+  }
+}
