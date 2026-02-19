@@ -107,8 +107,7 @@ main {
 
     input {
       display: inline-flex;
-      background-color: var(--card-background);
-      color: var(--light-accent);
+      background-color: var(--light-accent);
       border-radius: 1rem;
       padding: 0.625rem;
       width: 100%;
@@ -117,7 +116,7 @@ main {
       font-weight: 600;
 
       &::placeholder {
-        color: var(--light-accent);
+        color: var(--dark-accent);
       }
 
       &:focus {
