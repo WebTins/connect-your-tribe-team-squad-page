@@ -1,2 +1,23 @@
-# Squad Page
-Ontwerp en maak samen met je team een website met NodeJS, Express, JSON en Liquid
+# Squad Page 1i - Twitch - Team Fun
+We hebben in sprint 7 als Team de opdracht gekregen om een Squad Page te gaan bouwen met behulp van NodeJS, Express, JSON en Liquid. In JSON worden [alle data](https://fdnd.directus.app/items/person/) getoont die uit de FDND Database komen.
+
+Als team hebben wij gewerkt aan verschillende interacties zoals de: Zoekbalk, Sorteer en Filter knoppen waar je op squads kan sorteren en van oud naar jong of van jong naar oud kan filteren. En als laatst een comment sectie waar je een berichtje kan achterlaten bij elk student/docent (UGC - User Generated Content).
+
+Bij het maken van een website is het belangrijk dat het responsive is voor alle apparaten (Mobiel, Tablet en Desktop) maar ook de toegankelijkheid voor alle gebruikers. Als team hebben wij ons best gedaan om deze belangrijke eigenschappen te toepassen aan onze website. En om deze eigenschappen te controleren maken we gebruik van een WCAG Audit en een Kleur Contrast test.
+
+**Het team (Fun)**
+
+In dit team werken 3 eerste jaars Frontend Design & Development studenten studenten.
+
+- [Tin Nguyen](https://github.com/WebTins)
+
+- [Semih Demir](https://github.com/Hexterty46)
+
+- [Kate Jadi](https://github.com/Kitkatisvibing)
+
+## Inhoudsopgave
+
+## Beschrijving
+
+De squadpage is eerst ontworpen en daarna gebouwd met interacties. De hoofdpagina toont een lijst aan studenten met een foto, naam, bijnaam, geboortedatum en schoenmaat. En in de hoofdpagina is het mogelijk om te gaan sorteren op squads, filteren op leeftijd en naar de chatpagina te gaan.
+
