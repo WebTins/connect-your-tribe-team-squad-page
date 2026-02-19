@@ -130,13 +130,13 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
     gap: 1.5rem;
-    padding: var(--gap-small);
+    padding: 1.5rem 0 2rem 0;
     justify-items: center;
 
     .card-box {
       display: grid;
       gap: var(--gap-small);
-      padding: 2rem;
+      padding: 2rem 1rem 1rem 1rem;
       border-radius: var(--gap-small);
       background: var(--card-background);
       width: 100%;
@@ -181,11 +181,12 @@ main {
         a:nth-of-type(2) {
           text-decoration: none;
           background: var(--primary-background);
+          color: var(--light-accent);
           font-weight: bold;
           border-radius: 4px;
           text-align: center;
           padding: 1rem;
-          color: white;
+          margin-top: 1rem;
         }
 
         a:nth-of-type(2):hover {
