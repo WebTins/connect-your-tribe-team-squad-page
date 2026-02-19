@@ -69,6 +69,13 @@ main {
     padding: var(--gap-large);
     flex-wrap: wrap;
     list-style-type: none;
+    font-weight: 600;
+
+  .active {
+    background-color: var(--light-accent);
+    color: var(--dark-accent);
+    font-weight: 600;
+  }
 
     a {
       display: inline-flex;
@@ -85,7 +92,7 @@ main {
     }
 
     a:hover {
-      background-color: rgb(137 86 251 / 30%);
+      background-color: rgb(137 86 251 / 90%);
     }
 
     a:active {
@@ -107,6 +114,7 @@ main {
       width: 100%;
       text-align: center;
       border: none;
+      font-weight: 600;
 
       &::placeholder {
         color: var(--light-accent);
@@ -124,6 +132,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
     gap: 1.5rem;
     padding: var(--gap-small);
+    justify-items: center;
 
     .card-box {
       display: grid;
@@ -172,11 +181,12 @@ main {
 
         a:nth-of-type(2) {
           text-decoration: none;
-          background: var(--profile-card-background-color);
+          background: var(--primary-background);
           font-weight: bold;
           border-radius: 4px;
           text-align: center;
           padding: 1rem;
+          color: white;
         }
 
         a:nth-of-type(2):hover {
