@@ -129,7 +129,7 @@ main {
   .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
-    gap: 1.5rem;
+    gap: var(--gap-small);
     padding: 1.5rem 0 2rem 0;
     justify-items: center;
 
@@ -171,6 +171,8 @@ main {
           border-radius: 4px;
 
           h2 {
+            display: flex;
+            justify-content: center;
             color: var(--light-accent);
             background: var(--card-background);
             font-size: 1.6rem;
