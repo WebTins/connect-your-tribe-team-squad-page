@@ -50,6 +50,7 @@ app.get("/", async function (request, response) {
     search: request.query.search || "",
     persons: personResponseJSON.data,
     teamName: teamName,
+    page: "alle",
   });
 });
 
@@ -140,7 +141,7 @@ app.get("/squad-1i", async function (request, response) {
 
   const personResponseJSON = await personResponse.json();
 
-  response.render("index.liquid", { persons: personResponseJSON.data });
+  response.render("index.liquid", { persons: personResponseJSON.data, page: "squad-1i" });
 });
 
 app.get("/squad-1j", async function (request, response) {
@@ -158,7 +159,7 @@ app.get("/squad-1j", async function (request, response) {
 
   const personResponseJSON = await personResponse.json();
 
-  response.render("index.liquid", { persons: personResponseJSON.data });
+  response.render("index.liquid", { persons: personResponseJSON.data, page: "squad-1j" });
 });
 
 app.get("/jong", async function (request, response) {
@@ -177,7 +178,7 @@ app.get("/jong", async function (request, response) {
 
   const personResponseJSON = await personResponse.json();
 
-  response.render("index.liquid", { persons: personResponseJSON.data });
+  response.render("index.liquid", { persons: personResponseJSON.data, page: "jong" });
 });
 
 app.get("/oud", async function (request, response) {
@@ -196,7 +197,7 @@ app.get("/oud", async function (request, response) {
 
   const personResponseJSON = await personResponse.json();
 
-  response.render("index.liquid", { persons: personResponseJSON.data });
+  response.render("index.liquid", { persons: personResponseJSON.data, page: "oud" });
 });
 
 app.set("port", process.env.PORT || 8000);

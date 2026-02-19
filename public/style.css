@@ -69,6 +69,11 @@ main {
     padding: var(--gap-large);
     flex-wrap: wrap;
     list-style-type: none;
+    .active {
+      background-color: var(--light-accent);
+      color: var(--dark-accent);
+      font-weight: 600;
+    }
 
     a {
       display: inline-flex;

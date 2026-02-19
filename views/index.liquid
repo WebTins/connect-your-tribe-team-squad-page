@@ -9,28 +9,27 @@
   <ul class="filters">
     <li>
       {% comment %} Filter naar alle squads {% endcomment %}
-      <a href="/" class="filter-link">Alle squads</a>
+      <a href="/" class="filter-link {% if page == "alle" %} active {% endif %}">Alle squads</a>
     </li>
     {% comment %} Filter naar Squad 1i {% endcomment %}
     <li>
-      <a href="/squad-1i" class="filter-link">Squad 1I</a>
+      <a href="/squad-1i" class="filter-link {% if page == "squad-1i" %} active {% endif %}">Squad 1I</a>
     </li>
     {% comment %} Filter naar Squad 1j {% endcomment %}
     <li>
-      <a href="/squad-1j" class="filter-link">Squad 1J</a>
+      <a href="/squad-1j" class="filter-link {% if page == "squad-1j" %} active {% endif %}">Squad 1J</a>
     </li>
     {% comment %} Filter naar jongste {% endcomment %}
     <li>
-      <a href="/jong" class="filter-link">Jongste</a>
+      <a href="/jong" class="filter-link {% if page == "jong" %} active {% endif %}">Jongste</a>
     </li>
     {% comment %} Filter naar oudste {% endcomment %}
     <li>
-      <a href="/oud" class="filter-link">Oudste</a>
+      <a href="/oud" class="filter-link {% if page == "oud" %} active {% endif %}">Oudste</a>
     </li>
   </ul>
 
   <section class="search-bar">
-  <section>
     <form method="GET" action="/">
       <input 
         type="search" 
