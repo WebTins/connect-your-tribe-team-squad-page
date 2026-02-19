@@ -231,11 +231,9 @@ main {
 }
 
 /* MARK: Back button in student.liquid */
-.back{
+.back {
   display: inline-flex;
   justify-content: center;
-  position: relative;
-  bottom: 5.5rem;
   font-family: sans-serif;
   align-items: center;
   text-decoration: none;
@@ -259,12 +257,14 @@ main {
   align-items: center;
   max-width: 700px;
   margin: 2rem auto;
+  padding: 0 1rem;
+  gap: var(--gap-medium);
 
   /* MARK: Chatbox */
-  .messages{
+  .messages {
     display: flex;
     flex-direction: column;
-    position: relative;
+    width: 100%;
     height: 20rem;
     background-color: #1f1f23;
     overflow-y: auto;
@@ -272,9 +272,7 @@ main {
     border-radius: 8px;
     gap: 0.75rem;
     font-family: sans-serif;
-    bottom: 3.5rem;
 
-    /* Titel chat */
     .chat-title {
       display: flex;
       justify-content: center;
@@ -292,9 +290,8 @@ main {
   }
 
   /* MARK: Input box chat */
-  .chat{
-    position: absolute;
-    bottom: 3rem;
+  .chat {
+    width: 100%;
     color: var(--light-accent);
     background-color: #1f1f23;
     padding: 1rem;
@@ -302,11 +299,9 @@ main {
     font-family: sans-serif;
 
     h2 {
+      display: flex;
+      justify-content: center;
       padding-bottom: 1rem;
-    }
-
-    label{
-      padding-right: 20px;
     }
 
     input, textarea {
@@ -315,6 +310,12 @@ main {
       color: var(--light-accent);
       padding: 0.5rem;
       border-radius: 4px;
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
     }
 
     button {
@@ -331,12 +332,19 @@ main {
     form {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
       gap: var(--gap-small);
+      width: 100%;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        width: 100%;
+        padding-right: 0;
+      }   
     }
   }
 
-  /* Active state */
   button:hover {
     background-color: rgb(137 86 251 / 30%);
   }
