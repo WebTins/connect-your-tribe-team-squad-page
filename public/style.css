@@ -71,11 +71,6 @@ main {
     list-style-type: none;
     font-weight: 600;
 
-  .active {
-    background-color: var(--light-accent);
-    color: var(--dark-accent);
-    font-weight: 600;
-  }
 
     a {
       display: inline-flex;
