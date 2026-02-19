@@ -69,6 +69,8 @@ main {
     padding: var(--gap-large);
     flex-wrap: wrap;
     list-style-type: none;
+    font-weight: 600;
+
     .active {
       background-color: var(--light-accent);
       color: var(--dark-accent);
@@ -91,6 +93,7 @@ main {
 
     a:hover {
       background-color: rgb(137 86 251 / 30%);
+      background-color: rgb(137 86 251 / 90%);
     }
 
     a:active {
