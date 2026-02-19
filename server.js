@@ -99,6 +99,7 @@ app.get("/student/:id", async function (request, response) {
   });
 });
 
+// Route in student id voor het posten van data
 app.post("/student/:id", async function (request, response) {
   // Stuur een POST request naar de messages tabel
   // Een POST request bevat ook extra parameters, naast een URL
@@ -126,12 +127,15 @@ app.post("/student/:id", async function (request, response) {
   response.redirect(303, `/student/${request.params.id}`);
 });
 
+// Route die alle leden van squad 1i ophaalt
 app.get("/squad-1i", async function (request, response) {
   const params = {
     fields: "*,squads.*",
-
+    // Haal alle eerstejaars squads van dit jaar uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][tribe][name]": "FDND Jaar 1",
+    // Haal alle namen van de leden in squad 1i uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][name]": "1I",
+    // Haal  alle eerstejaars squads van het jaar 25/26 uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][cohort]": "2526",
   };
 
@@ -144,12 +148,15 @@ app.get("/squad-1i", async function (request, response) {
   response.render("index.liquid", { persons: personResponseJSON.data, page: "squad-1i" });
 });
 
+// Route die alle leden van squad 1j ophaalt
 app.get("/squad-1j", async function (request, response) {
   const params = {
     fields: "*,squads.*",
-
+    // Haal alle eerstejaars squads van dit jaar uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][tribe][name]": "FDND Jaar 1",
+    // Haal alle namen van de leden in squad 1j uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][name]": "1J",
+    // Haal  alle eerstejaars squads van het jaar 25/26 uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][cohort]": "2526",
   };
 
@@ -162,13 +169,18 @@ app.get("/squad-1j", async function (request, response) {
   response.render("index.liquid", { persons: personResponseJSON.data, page: "squad-1j" });
 });
 
+// Route die de leden van jong naar oud ophaalt
 app.get("/jong", async function (request, response) {
   const params = {
     fields: "*,squads.*",
-    sort: "-birthdate,name",
 
+    // Sorteer op oplopende verjaardagen
+    sort: "-birthdate,name",
+    // Haal alle eerstejaars squads van dit jaar uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][tribe][name]": "FDND Jaar 1",
+    // Haal  alle eerstejaars squads van het jaar 25/26 uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][cohort]": "2526",
+    // Filter op alle verjaardagen die zijn ingevuld
     "filter[birthdate][_nnull]": true,
   };
 
@@ -181,13 +193,19 @@ app.get("/jong", async function (request, response) {
   response.render("index.liquid", { persons: personResponseJSON.data, page: "jong" });
 });
 
+// Route die de leden van oud naar jong ophaalt
 app.get("/oud", async function (request, response) {
   const params = {
     fields: "*,squads.*",
+
+    // Sorteer op aflopende verjaardagen
     sort: "birthdate,name",
 
+    // Haal alle eerstejaars squads van dit jaar uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][tribe][name]": "FDND Jaar 1",
+    // Haal  alle eerstejaars squads van het jaar 25/26 uit de WHOIS API op (2025–2026)
     "filter[squads][squad_id][cohort]": "2526",
+    // Filter op alle verjaardagen die zijn ingevuld
     "filter[birthdate][_nnull]": true,
   };
 

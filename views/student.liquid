@@ -1,5 +1,6 @@
 {% render 'partials/head.liquid' %}
 
+{% comment %} Styling voor de H1 die de favoriete kleur pakt van de student en dat als text shadow zet {% endcomment %}
 <h1 class="student-heading" style="text-shadow:
     -2px -2px 0 {{ person.fav_color }},
     2px -2px 0 {{ person.fav_color }},
@@ -8,9 +9,12 @@
     4px  4px 0 {{ person.fav_color }}"
     >{{ person.name }}</h1>
 
-
+{% comment %} Back button om terug te kunnen gaan naar de home pagina {% endcomment %}
 <a href="/" class="back">Back</a>
+
+{% comment %} Chat pagina {% endcomment %}
 <div class="chat-page">
+    {% comment %} Message box {% endcomment %}
     <section class="messages">
         <h2 class="chat-title">Chat</h2>
         {% for message in messages %}
@@ -20,6 +24,7 @@
         {% endfor %}
     </section>
 
+    {% comment %} Chat input {% endcomment %}
     <section class="chat">
     <h2>Voeg een bericht toe</h2>
     <form method="post" action="/student/{{ person.id }}">
