@@ -211,44 +211,107 @@ main {
   }
 }
 
-
 .back{
-      display: inline-flex;
-      justify-content: center;
-      font-family: sans-serif;
-      align-items: center;
-      text-decoration: none;
-      color: var(--light-accent);
-      background-color: var(--card-background);
-      border-radius: var(--border-radius-button);
-      width: 100px;
-      height: 40px;
-      transition: 0.3s ease-in-out;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  bottom: 5.5rem;
+  font-family: sans-serif;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light-accent);
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-button);
+  width: 100px;
+  height: 40px;
+  transition: 0.3s ease-in-out;
 }
+
 .back:hover {
   background-color: rgb(137 86 251 / 30%);
 }
 
-div{
-  text-align: center;
+.chat-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 700px;
+  margin: 2rem auto;
+
   .messages{
-    background-color: var(--card-background);
-    height: 70vh;
-    max-width: 70vw;
-    min-width: 50vw;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 20rem;
+    background-color: #1f1f23;
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 0.75rem;
+    font-family: sans-serif;
+    bottom: 3.5rem;
+
+    .chat-title {
+      display: flex;
+      justify-content: center;
+      color: var(--light-accent);
+    }
+
+    p {
+      background-color: #26262c;
+      color: var(--light-accent);
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      border-left: 3px solid #9147ff;
+    }
   }
 
   .chat{
-    background-color: var(--profile-card-background-color);
-    max-width: 70vw;
-    min-width: 50vw;
+    position: absolute;
+    bottom: 3rem;
+    color: var(--light-accent);
+    background-color: #1f1f23;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: sans-serif;
+
+    h2 {
+      padding-bottom: 1rem;
+    }
 
     label{
       padding-right: 20px;
     }
+
+    input, textarea {
+      background-color: #26262c;
+      border: 1px solid #3a3a3d;
+      color: var(--light-accent);
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: var(--card-background);
+      color: var(--light-accent);
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: var(--border-radius-button);
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: var(--gap-small);
+    }
+  }
+
+  button:hover {
+    background-color: rgb(137 86 251 / 30%);
   }
 }

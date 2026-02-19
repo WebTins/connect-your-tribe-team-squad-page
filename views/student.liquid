@@ -10,12 +10,13 @@
 
 
 <a href="/" class="back">Back</a>
-<div>
+<div class="chat-page">
     <section class="messages">
+        <h2 class="chat-title">Chat</h2>
         {% for message in messages %}
         <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
         {% else %}
-        <p>Er zijn nog geen berichten voor dit team.</p>
+        <p>Er zijn nog geen berichten voor deze persoon.</p>
         {% endfor %}
     </section>
 
