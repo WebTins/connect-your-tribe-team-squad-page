@@ -19,5 +19,17 @@ In dit team werken 3 eerste jaars Frontend Design & Development studenten studen
 
 ## Beschrijving
 
+[Website](https://connect-your-tribe-team-squad-page-kvl8.onrender.com/)
+
 De squadpage is eerst ontworpen en daarna gebouwd met interacties. De hoofdpagina toont een lijst aan studenten met een foto, naam, bijnaam, geboortedatum en schoenmaat. En in de hoofdpagina is het mogelijk om te gaan sorteren op squads, filteren op leeftijd en naar de chatpagina te gaan.
+
+<img width="1800" height="760" alt="all-devices-black" src="https://github.com/user-attachments/assets/888f24fc-eecf-4bfd-8490-ff07460dd247" />
+
+> Mockup van gemaakte Squad Page - Index
+
+<img width="1800" height="760" alt="all-devices-black (1)" src="https://github.com/user-attachments/assets/e2548cb1-fa33-4380-8484-fc440ad4fb4b" />
+
+> Mockup van gemaakte Squad Page - Comment section
+
+
 
