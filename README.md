@@ -31,5 +31,13 @@ De squadpage is eerst ontworpen en daarna gebouwd met interacties. De hoofdpagin
 
 > Mockup van gemaakte Squad Page - Comment section
 
+**Responsiveness**
 
+Responsiveness van de website is belangrijk voor alle apparaten en daarom hebben wij ook eerst op mobiele versie gewerkt om onze responsivness uit te breiden op tablet en desktop. We hebben ervoor gezorgd dat de cards onder elkaar in 1 kolom staan op mobiel en voor tablet worden er 2 kolommen getoont. Voor desktop worden zo'n 3-4 kolommen aan cards weergegeven.
+
+https://github.com/user-attachments/assets/de7b1136-7213-49ec-9c40-7cce5053f746
+
+**Toegankelijkheid**
+
+Als team hebben wij ons best gedaan om de website toegankelijk te maken door middel van goede kleuren te gebruiken die voldoen aan het contrast dat leesbaar is voor iedereen.
 
