@@ -63,8 +63,6 @@ Het doel van de sorteer interactie is dat als je op "Jong" of "Oud" klikt, dat d
 
 De sorteer knoppen zijn gemaakt met[routes](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/e4b85f74c3b56bce7b028e057cc16c9e95fe0876/server.js#L172-L219) die in NodeJS staan.
 
-https://github.com/user-attachments/assets/581fb10b-d19b-46ce-9650-957595967429
-
 #### <ins>Feedforward & Feedback</ins>
 
 Feedforward sorteer Jong/Oud:
@@ -73,3 +71,12 @@ Feedforward sorteer Jong/Oud:
 
 Feedback filter items:
 - Na het klikken op de sorteer knop worden leden getoont van jong naar oud of van oud naar jong.
+
+https://github.com/user-attachments/assets/581fb10b-d19b-46ce-9650-957595967429
+
+
+### Zoekbalk
+
+Naast het sorteren en filteren is het ook mogelijk om een specifieke persoon te gaan zoeken in de zoekbalk. In de [home route](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/08a8215264fbf981fa328ffb1b115ffe409a2db7/server.js#L27-L29) die in server.js staat wordt een query search uitgevoerd die de naam filtert met de inhoud die je meegeeft.
+
+https://github.com/user-attachments/assets/6eddaa6b-a69d-4634-b745-a59f4827b67c
