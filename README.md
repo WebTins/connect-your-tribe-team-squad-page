@@ -80,3 +80,45 @@ https://github.com/user-attachments/assets/581fb10b-d19b-46ce-9650-957595967429
 Naast het sorteren en filteren is het ook mogelijk om een specifieke persoon te gaan zoeken in de zoekbalk. In de [home route](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/08a8215264fbf981fa328ffb1b115ffe409a2db7/server.js#L27-L29) die in server.js staat wordt een query search uitgevoerd die de naam filtert met de inhoud die je meegeeft.
 
 https://github.com/user-attachments/assets/6eddaa6b-a69d-4634-b745-a59f4827b67c
+
+### Twitch Chat
+
+Onze theme voor de website is geïnspireerd door "Twitch" een online streamingplatform waar je kan livestreamen en chatten. Het doel van de twitch chat is dat je een bericht kan achterlaten bij elke persoon die je aanklikt op de homepagina. Je kan je eigen naam achterlaten met een berichtje wanneer je op de chat pagina bent beland.
+
+https://github.com/user-attachments/assets/b007fb9e-04f8-41b9-8f37-e43eb8d88e4b
+
+## Kenmerken
+
+In dit project is er gebruik gemaakt van HTML, CSS, JS, NodeJS, Express, JSON en Liquid.
+
+**Active**
+
+De sorteer/filter buttons krijgen een "active state" wanneer je erop klikt. Dit zorgt voor duidelijkheid waar je nu bent op de pagina en wat je hebt aangelikt.
+
+https://github.com/user-attachments/assets/443420e7-3b42-4f71-bebd-4afcdcd2b5ae
+
+**Else placeholder**
+
+Leden zonder een profielfoto in de database krijgen als vervanging een Patrick foto.
+
+<img width="326" height="493" alt="image" src="https://github.com/user-attachments/assets/a5f846dc-8e09-4d0b-800f-c2e42b1c629c" />
+
+## Code conventies
+
+### Ademnruimte
+
+In onze code maken wij gebruik van ademruimte dat ervoor zorgt dat het lezen van code leesbaar is en te volgen is. Na elke element wordt een witregel gemaakt om het element duidelijk scheidbaar te tonen. En elementen in een elementen worden met 1 tab uitgespreid om te laten zien dat het in het parent element hoort.
+
+[Voorbeeld](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/ea308ee98aa5b659e00e4d0e0119d300e8557b63/views/index.liquid#L7-L30)
+
+## Volgorde HTML en CSS nesting
+
+Bij onze code conventies houden wij rekening met de vologorde van de HTML structuur die ook in het CSS bestand op volgorde wordt gehouden, hierdoor wordt het lezen van code volgbaar en leesbaar. In onze CSS nesten wij code die in het parent element/class horen. Dit zorgt voor een duidelijke structuur dat het lezen makkelijker maakt.
+
+## Custom properties
+
+Wij maken gebruik van custom-properties zodat we niet steeds code hoeven te herhalen (DRY). De custom properties krijgen een duidelijke naamgeving in kebabcase zoals `--light-accent`.
+
+## Class naamgeving
+
+De classes die wij aanmaken worden allemaal in het Engels geschreven met kebab-cases. Dit maakt het lezen makkelijker omdat je een scheiding maakt tussen woorden die niet leesbaar zijn aan elkaar.
