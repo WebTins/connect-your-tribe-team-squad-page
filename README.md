@@ -41,3 +41,8 @@ https://github.com/user-attachments/assets/de7b1136-7213-49ec-9c40-7cce5053f746
 
 Als team hebben wij ons best gedaan om de website toegankelijk te maken door middel van kleuren te gebruiken die voldoen aan het contrast dat leesbaar is voor iedereen. Om de toegankelijk te kunnen testen hebben we een [WCAG Audit](https://github.com/WebTins/connect-your-tribe-team-squad-page/issues/15) gedaan met een Lighthouse test op Google Chrome. Ook hebben we een handmatige test uitgevoerd die we moeten voldoen van het A11Y Project.
 
+### Sorteer op Squads
+
+Het doel van de sorteer interactie is dat als je op "Squad 1i" of "Squad 1j" klikt, dat de cards worden gesorteerd op de leden in de squad. Ook kan je weer terug sorteren naar "Alle squads.
+
+De sorteer knoppen zijn gemaakt met [routes](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/722ffd12b304e7c8d8c2b4858d66e180b299167e/server.js#L131-L170) die in NodeJS staan.
