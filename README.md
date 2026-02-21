@@ -41,8 +41,35 @@ https://github.com/user-attachments/assets/de7b1136-7213-49ec-9c40-7cce5053f746
 
 Als team hebben wij ons best gedaan om de website toegankelijk te maken door middel van kleuren te gebruiken die voldoen aan het contrast dat leesbaar is voor iedereen. Om de toegankelijk te kunnen testen hebben we een [WCAG Audit](https://github.com/WebTins/connect-your-tribe-team-squad-page/issues/15) gedaan met een Lighthouse test op Google Chrome. Ook hebben we een handmatige test uitgevoerd die we moeten voldoen van het A11Y Project.
 
-### Sorteer op Squads
+### Filter op Squads
 
-Het doel van de sorteer interactie is dat als je op "Squad 1i" of "Squad 1j" klikt, dat de cards worden gesorteerd op de leden in de squad. Ook kan je weer terug sorteren naar "Alle squads.
+Het doel van de filter interactie is dat als je op "Squad 1i" of "Squad 1j" klikt, dat de cards worden gefiltered op de leden in de squad. Ook kan je weer terug sorteren naar "Alle squads.
 
-De sorteer knoppen zijn gemaakt met [routes](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/722ffd12b304e7c8d8c2b4858d66e180b299167e/server.js#L131-L170) die in NodeJS staan.
+De filter knoppen zijn gemaakt met [routes](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/722ffd12b304e7c8d8c2b4858d66e180b299167e/server.js#L131-L170) die in NodeJS staan.
+
+#### <ins>Feedforward & Feedback</ins>
+Feedforward filter Squads:
+- Er staat een knop bovenaan de pagina in het paars
+- Met een hover over de filter krijgt de knop een lichtere kleur
+
+Feedback filter naam:
+- Na het klikken op de filter Squad 1i/Squad 1j/Alle Squads, worden alle leden getoont die in de Squad zitten
+
+https://github.com/user-attachments/assets/31025ed8-d315-49d6-9616-a3e67bc6749d
+
+### Sorteer op leeftijd
+
+Het doel van de sorteer interactie is dat als je op "Jong" of "Oud" klikt, dat de cards worden sorteerd op jong/oud leeftijd.
+
+De sorteer knoppen zijn gemaakt met[routes](https://github.com/WebTins/connect-your-tribe-team-squad-page/blob/e4b85f74c3b56bce7b028e057cc16c9e95fe0876/server.js#L172-L219) die in NodeJS staan.
+
+https://github.com/user-attachments/assets/581fb10b-d19b-46ce-9650-957595967429
+
+#### <ins>Feedforward & Feedback</ins>
+
+Feedforward sorteer Jong/Oud:
+- Er staat een knop bovenaan de pagina in het paars
+- Met een hover over de sorteer knop krijgt de knop een lichtere kleur
+
+Feedback filter items:
+- Na het klikken op de sorteer knop worden leden getoont van jong naar oud of van oud naar jong.
